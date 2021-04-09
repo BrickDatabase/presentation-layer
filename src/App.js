@@ -4,12 +4,13 @@ import 'bootstrap/dist/css/bootstrap.css'
 import ErrorBoundary from './components/ErrorBoundary'
 import Chart from './components/Chart'
 import Deck from './components/Deck'
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
     <div className="App">
       <ErrorBoundary>
-        <Deck style={{width: '20rem', height: '100%'}} title="Type of Charts" subtitle="Result"/>
+      <Dashboard/>
       </ErrorBoundary>
     </div>
   );
