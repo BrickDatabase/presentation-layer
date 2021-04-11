@@ -124,14 +124,14 @@ class Deck extends React.Component{
 //width: '15rem', height: '100%'
     render(){
         return(
-            // <div class="card">
-                <Card style={this.props.style}>
+            //  <div class="card">
+                <Card style={this.props.style} className='board'>
                     <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        {this.state.views}
+                        <Card.Title style={{backgroundColor: 'white', padding: '10px'}}>{this.props.title}</Card.Title>
+                        <p style={{ marginTop: '-2%', paddingBottom: '50%'}}>{this.state.views}</p>
                     </Card.Body>
                 </Card>
-            // </div>
+            //  </div>
         )
     }
 }

@@ -14,12 +14,19 @@ function App() {
       <ErrorBoundary>
         <Container>
           <Row>
-            <Col><Deck odp={'inputs'} style={{width: '20rem', height: '25rem', backgroundColor: 'lightgray' }} title="Reddit Topics" subtitle="Result"/></Col>
-            <Col><Deck style={{width: '40rem', height: '25rem', backgroundColor: 'lightgray'}} title="Result" subtitle="Result"/></Col>
+            <Col style={{paddingRight: '0'}}><Deck op={'inputs'} style={{backgroundColor: 'lightgray'}} title="Reddit Topics" subtitle="Result"/></Col>
+            <Col style={{paddingLeft: '0'}}><Deck style={{backgroundColor: 'lightgray'}} title="Result" subtitle="Result"/></Col>
+            {/* width: '20rem', height: '25rem', */}
+            {/* width: '40rem', height: '25rem', */}
+            {/* Col style={{paddingRight: '0', marginRight: '-175px'}}*/}
           </Row>
           <Row>
-            <Col><Deck op={'radios'} style={{width: '20rem', height: '25rem', backgroundColor: 'lightgray' }} title="Type of Charts"/></Col>
-            <Col><Deck op={'fourthBox'} style={{width: '40rem', height: '25rem', backgroundColor: 'lightgray' }} title="Reddit Features" subtitle="Result"/></Col>
+            <Col style={{paddingRight: '0'}}><Deck op={'radios'} style={{backgroundColor: 'lightgray' }} title="Type of Charts"/></Col>
+            <Col style={{paddingLeft: '0'}}><Deck op={'fourthBox'} title="Reddit Features" subtitle="Result"/></Col>
+            {/* width: '20rem', height: '25rem', */}
+            {/* width: '40rem', height: '25rem', */}
+            {/* Col style={{paddingRight: '0', marginRight: '-175px'}} */}
+            {/* Deck style={{width: '100%', height: '400px'}} */}
           </Row>
         </Container>
       </ErrorBoundary>
