@@ -1,29 +1,51 @@
 import React from "react"
 import { Pie } from "react-chartjs-2"
 import {Container } from "react-bootstrap"
+import axios from 'axios'
+
+
 
 class PieChart extends React.Component {
+
+    componentDidMount(){
+        axios.get('http://localhost:5000/infos')
+        .then(res =>{
+          const infos = res.data
+          console.log(res.data)
+          const lengths = infos.result.rows.length
+          console.log(infos.result.rows[412])
+        })
+    }
+
     state = {
       dataPie: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+        labels: ["rit", "minecraft", "bitcoin", "wallstreetbets", "robinhood", "gamestop","playstation","xbox","nintendo","twitch"],
         datasets: [
           {
-            data: [300, 50, 100, 40, 120],
+            data: [300, 50, 100, 40, 120, 340, 130, 234, 234, 105],
             backgroundColor: [
-              "#F7464A",
-              "#46BFBD",
-              "#FDB45C",
+              "#F76902",
+              "#028A0F",
+              "#f2a900",
               "#949FB1",
               "#4D5360",
-              "#AC64AD"
+              "#260000",
+              "#1520A6",
+              "#083e08",
+              "#E60012",
+              "#6441A4"
             ],
             hoverBackgroundColor: [
-              "#FF5A5E",
-              "#5AD3D1",
-              "#FFC870",
-              "#A8B3C5",
-              "#616774",
-              "#DA92DB"
+             "#f88734",
+             "#34a13e",
+             "#f4ba32",
+             "#a9b2c0",
+             "#70757f",
+             "#513232",
+             "#434cb7",
+             "#3f963f",
+             "#eb3241",
+             "#8366b6"
             ]
           }
         ]

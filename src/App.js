@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import ErrorBoundary from './components/ErrorBoundary'
 import Chart from './components/Chart'
 import Deck from './components/Deck'
-
+import Global from './helpers/Global'
 import Dashboard from './components/Dashboard'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'

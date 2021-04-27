@@ -1,31 +1,25 @@
 import { Component } from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
-import {Container, Row, Col } from "react-bootstrap"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHamburger} from '@fortawesome/free-solid-svg-icons'
-import PieChart from './PieChart'
+import {Container, Row, Col,Button } from "react-bootstrap"
 import LineChart from './LineChart'
-import { Line } from 'react-chartjs-2'
 
 class Dashboard extends Component {
 
     constructor(props){
         super(props)
 
-        this.state = {chart:<PieChart/>}  
+        this.state = {chart:<LineChart/>}
+        // this.getPie = this.getPie.bind(this)
+        // this.getLine = this.getLine.bind(this)
+        this.onChartChanged = this.onChartChanged.bind(this)
     }
 
-    getPie()
+    onChartChanged(values)
     {
-        this.setState({chart:<PieChart/>})
+        this.setState({chart:values})
     }
-
-    getLine()
-    {
-        this.setState({chart:<LineChart/>})
-    }
-
+    
     render(){
         return (
             <>
@@ -33,7 +27,7 @@ class Dashboard extends Component {
             <Container fluid>
             <Row>
                 <Col xs={3} id="sidebar-wrapper">
-                <Sidebar/>
+                <Sidebar charts={this.state.chart} onChartChanged={this.onChartChanged}/>
                 </Col>
                 <Col id="page-content-wrapper">
                     {this.state.chart}
