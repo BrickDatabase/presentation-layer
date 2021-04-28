@@ -1,31 +1,44 @@
-import React from "react";
-import { Bar } from "react-chartjs-2";
-import { Container } from "react-bootstrap";
+import React from "react"
+import { Bar } from "react-chartjs-2"
+import { Container } from "react-bootstrap"
+import {RIT, MINECRAFT, 
+  BITCOIN, WALLSTREET,
+ROBINHOOD, GAMESTOP, PLAYSTATION,
+XBOX, NINTENDO, TWITCH} from './BrandColors'
 
 class BarChart extends React.Component {
   state = {
     dataBar: {
-      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      labels: ["rit", "minecraft", "bitcoin", "wallstreetbets", "robinhood", 
+      "gamestop","playstation","xbox","nintendo","twitch"],
       datasets: [
         {
-          label: "% of Votes",
-          data: [12, 19, 3, 5, 2, 3],
+          label: "% of Comments",
+          data: [12, 19, 3, 5, 2, 3, 7, 8, 9, 2],
           backgroundColor: [
-            "rgba(255, 134,159,0.4)",
-            "rgba(98,  182, 239,0.4)",
-            "rgba(255, 218, 128,0.4)",
-            "rgba(113, 205, 205,0.4)",
-            "rgba(170, 128, 252,0.4)",
-            "rgba(255, 177, 101,0.4)"
+            RIT.FILL,
+            MINECRAFT.FILL,
+            BITCOIN.FILL,
+            WALLSTREET.FILL,
+            ROBINHOOD.FILL,
+            GAMESTOP.FILL,
+            PLAYSTATION.FILL,
+            XBOX.FILL,
+            NINTENDO.FILL,
+            TWITCH.FILL
           ],
           borderWidth: 2,
           borderColor: [
-            "rgba(255, 134, 159, 1)",
-            "rgba(98,  182, 239, 1)",
-            "rgba(255, 218, 128, 1)",
-            "rgba(113, 205, 205, 1)",
-            "rgba(170, 128, 252, 1)",
-            "rgba(255, 177, 101, 1)"
+            RIT.PRIMARY,
+            MINECRAFT.PRIMARY,
+            BITCOIN.PRIMARY,
+            WALLSTREET.PRIMARY,
+            ROBINHOOD.PRIMARY,
+            GAMESTOP.PRIMARY,
+            PLAYSTATION.PRIMARY,
+            XBOX.PRIMARY,
+            NINTENDO.PRIMARY,
+            TWITCH.PRIMARY
           ]
         }
       ]

@@ -2,19 +2,23 @@ import React from "react"
 import { Pie } from "react-chartjs-2"
 import {Container } from "react-bootstrap"
 import axios from 'axios'
+import {RIT, MINECRAFT, 
+  BITCOIN, WALLSTREET,
+ROBINHOOD, GAMESTOP, PLAYSTATION,
+XBOX, NINTENDO, TWITCH} from './BrandColors'
 
 
 
 class PieChart extends React.Component {
 
     componentDidMount(){
-        axios.get('http://localhost:5000/infos')
-        .then(res =>{
-          const infos = res.data
-          console.log(res.data)
-          const lengths = infos.result.rows.length
-          console.log(infos.result.rows[412])
-        })
+        // axios.get('http://localhost:5000/infos')
+        // .then(res =>{
+        //   const infos = res.data
+        //   console.log(res.data)
+        //   const lengths = infos.result.rows.length
+        //   console.log(infos.result.rows[412])
+        // })
     }
 
     state = {
@@ -24,28 +28,28 @@ class PieChart extends React.Component {
           {
             data: [300, 50, 100, 40, 120, 340, 130, 234, 234, 105],
             backgroundColor: [
-              "#F76902",
-              "#028A0F",
-              "#f2a900",
-              "#949FB1",
-              "#4D5360",
-              "#260000",
-              "#1520A6",
-              "#083e08",
-              "#E60012",
-              "#6441A4"
+              RIT.PRIMARY,
+              MINECRAFT.PRIMARY,
+              BITCOIN.PRIMARY,
+              WALLSTREET.PRIMARY,
+              ROBINHOOD.PRIMARY,
+              GAMESTOP.PRIMARY,
+              PLAYSTATION.PRIMARY,
+              XBOX.PRIMARY,
+              NINTENDO.PRIMARY,
+              TWITCH.PRIMARY
             ],
             hoverBackgroundColor: [
-             "#f88734",
-             "#34a13e",
-             "#f4ba32",
-             "#a9b2c0",
-             "#70757f",
-             "#513232",
-             "#434cb7",
-             "#3f963f",
-             "#eb3241",
-             "#8366b6"
+             RIT.HOVER,
+             MINECRAFT.HOVER,
+             BITCOIN.HOVER,
+             WALLSTREET.HOVER,
+             ROBINHOOD.HOVER,
+             GAMESTOP.HOVER,
+             PLAYSTATION.HOVER,
+             XBOX.HOVER,
+             NINTENDO.HOVER,
+             TWITCH.HOVER
             ]
           }
         ]

@@ -1,6 +1,10 @@
 import React from "react";
 import { Radar } from "react-chartjs-2";
 import { Container } from "react-bootstrap";
+import {RIT, MINECRAFT, 
+  BITCOIN, WALLSTREET,
+ROBINHOOD, GAMESTOP, PLAYSTATION,
+XBOX, NINTENDO, TWITCH} from './BrandColors'
 
 
 class RadarChart extends React.Component {
@@ -10,62 +14,62 @@ class RadarChart extends React.Component {
       datasets: [
         {
           label: "rit",
-          backgroundColor: "#fbc399",
-          borderColor: "#F76902",
+          backgroundColor: RIT.FILL,
+          borderColor: RIT.PRIMARY,
           data: [65, 59, 90, 81]
         },
         {
           label: "minecraft",
-          backgroundColor: "#99d09f",
-          borderColor: "#028A0F",
+          backgroundColor: MINECRAFT.FILL,
+          borderColor: MINECRAFT.PRIMARY,
           data: [28, 48, 40, 19]
         },
         {
             label: "bitcoin",
-            backgroundColor: "#f9dc99",
-            borderColor: "#f2a900",
+            backgroundColor: BITCOIN.FILL,
+            borderColor: BITCOIN.PRIMARY,
             data: [23, 48, 40, 19]
         },
         {
             label: "wallstreetbets",
-            backgroundColor: "#d4d8df",
-            borderColor: "#949FB1",
+            backgroundColor: WALLSTREET.FILL,
+            borderColor: WALLSTREET.PRIMARY,
             data: [28, 30, 40, 19]
         },
         {
             label: "robinhood",
-            backgroundColor: "#b7babf",
-            borderColor: "#4D5360",
+            backgroundColor: ROBINHOOD.FILL,
+            borderColor: ROBINHOOD.PRIMARY,
             data: [28, 48, 67, 19]
         },
         {
             label: "gamestop",
-            backgroundColor: "#a89999",
-            borderColor: "#260000",
+            backgroundColor: GAMESTOP.FILL,
+            borderColor: GAMESTOP.PRIMARY,
             data: [28, 48, 40, 83]
         },
         {
             label: "playstation",
-            backgroundColor: "#a1a5db",
-            borderColor: "#1520A6",
+            backgroundColor: PLAYSTATION.FILL,
+            borderColor: PLAYSTATION.PRIMARY,
             data: [28, 42, 40, 39]
         },
         {
             label: "xbox",
-            backgroundColor: "#9cb19c",
-            borderColor: "#083e08",
+            backgroundColor: XBOX.FILL,
+            borderColor: XBOX.PRIMARY,
             data: [21, 56, 40, 19]
         },
         {
             label: "nintendo",
-            backgroundColor: "#f599a0",
-            borderColor: "#E60012",
+            backgroundColor: NINTENDO.FILL,
+            borderColor: NINTENDO.PRIMARY,
             data: [28, 98, 40, 4]
         },
         {
             label: "twitch",
-            backgroundColor: "#c1b3da",
-            borderColor: "#6441A4",
+            backgroundColor: TWITCH.FILL,
+            borderColor: TWITCH.PRIMARY,
             data: [70, 48, 23, 19]
         }
       ]

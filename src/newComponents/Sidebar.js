@@ -43,7 +43,7 @@ class Sidebar extends Component{
 
     render(){
         return(
-            <div className="col-md-12 d-none d-md-block bg-light sidebar">
+            <div className="col-md-12 d-md-block bg-light">
 
                 <Button bg="dark" variant="dark" style={{marginBottom:'5px',borderRadius:'5px', width:'100%',height:'80px'}} onClick={this.getLine}>
                 <FontAwesomeIcon icon={faChartLine} size="lg" />
