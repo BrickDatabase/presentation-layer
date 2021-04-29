@@ -1,7 +1,6 @@
 import React from "react"
 import { Pie } from "react-chartjs-2"
 import {Container } from "react-bootstrap"
-import axios from 'axios'
 import {RIT, MINECRAFT, 
   BITCOIN, WALLSTREET,
 ROBINHOOD, GAMESTOP, PLAYSTATION,
@@ -11,14 +10,13 @@ XBOX, NINTENDO, TWITCH} from './BrandColors'
 
 class PieChart extends React.Component {
 
+    constructor(props){
+      super(props)
+
+    }
+
     componentDidMount(){
-        // axios.get('http://localhost:5000/infos')
-        // .then(res =>{
-        //   const infos = res.data
-        //   console.log(res.data)
-        //   const lengths = infos.result.rows.length
-        //   console.log(infos.result.rows[412])
-        // })
+
     }
 
     state = {
@@ -26,7 +24,7 @@ class PieChart extends React.Component {
         labels: ["rit", "minecraft", "bitcoin", "wallstreetbets", "robinhood", "gamestop","playstation","xbox","nintendo","twitch"],
         datasets: [
           {
-            data: [300, 50, 100, 40, 120, 340, 130, 234, 234, 105],
+            data: [this.props.datas[9].new_active_subs, this.props.datas[8].new_active_subs, this.props.datas[7].new_active_subs, this.props.datas[6].new_active_subs, this.props.datas[5].new_active_subs, this.props.datas[4].new_active_subs, this.props.datas[3].new_active_subs, this.props.datas[2].new_active_subs, this.props.datas[1].new_active_subs, this.props.datas[0].new_active_subs],
             backgroundColor: [
               RIT.PRIMARY,
               MINECRAFT.PRIMARY,
@@ -59,7 +57,7 @@ class PieChart extends React.Component {
     render() {
       return (
         <Container>
-          <h3 className="mt-5">Pie chart</h3>
+          <h3 className="mt-5">Pie Chart: Active Subscribers</h3>
           <Pie data={this.state.dataPie} options={{ responsive: true }} />
         </Container>
       );

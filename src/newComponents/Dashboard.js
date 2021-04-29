@@ -1,19 +1,24 @@
 import { Component } from 'react'
 import Header from './Header'
 import Sidebar from './Sidebar'
-import {Container, Row, Col,Button } from "react-bootstrap"
-import LineChart from './LineChart'
+import {Container, Row, Col} from "react-bootstrap"
+
 
 class Dashboard extends Component {
 
     constructor(props){
         super(props)
 
-        this.state = {chart:<LineChart/>}
-        // this.getPie = this.getPie.bind(this)
-        // this.getLine = this.getLine.bind(this)
         this.onChartChanged = this.onChartChanged.bind(this)
+        
+          this.state = {chart:""}
     }
+
+    componentDidMount() {
+
+    }
+
+    
 
     onChartChanged(values)
     {
@@ -27,7 +32,7 @@ class Dashboard extends Component {
             <Container fluid>
             <Row>
                 <Col xs={3} id="sidebar-wrapper">
-                <Sidebar charts={this.state.chart} onChartChanged={this.onChartChanged}/>
+                <Sidebar onChartChanged={this.onChartChanged}/>
                 </Col>
                 <Col id="page-content-wrapper">
                     {this.state.chart}

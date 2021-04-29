@@ -7,14 +7,23 @@ ROBINHOOD, GAMESTOP, PLAYSTATION,
 XBOX, NINTENDO, TWITCH} from './BrandColors'
 
 class BarChart extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+
+  }
+
   state = {
     dataBar: {
       labels: ["rit", "minecraft", "bitcoin", "wallstreetbets", "robinhood", 
       "gamestop","playstation","xbox","nintendo","twitch"],
       datasets: [
         {
-          label: "% of Comments",
-          data: [12, 19, 3, 5, 2, 3, 7, 8, 9, 2],
+          // label: "% of Comments",
+          data: [this.props.datas[9].new_comment, this.props.datas[8].new_comment, this.props.datas[7].new_comment, this.props.datas[6].new_comment, this.props.datas[5].new_comment, this.props.datas[4].new_comment, this.props.datas[3].new_comment, this.props.datas[2].new_comment, this.props.datas[1].new_comment, this.props.datas[0].new_comment],
           backgroundColor: [
             RIT.FILL,
             MINECRAFT.FILL,
@@ -75,7 +84,7 @@ class BarChart extends React.Component {
   render() {
     return (
       <Container>
-        <h3 className="mt-5">Bar chart</h3>
+        <h3 className="mt-5">Bar chart: Comments</h3>
         <Bar data={this.state.dataBar} options={this.state.barChartOptions} />
       </Container>
     );
